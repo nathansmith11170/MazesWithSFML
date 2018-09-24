@@ -128,7 +128,7 @@ int main(int argc, char **argv) {
         }
     }
     for( i = 0; i < rects.size(); i++) {
-        rects.at(i).setFillColor(sf::Color::White);
+        rects.at(i).setFillColor(sf::Color::Black);
         bottomEdges.at(i).setFillColor(sf::Color::Cyan);
         rightEdges.at(i).setFillColor(sf::Color::Cyan);
     }

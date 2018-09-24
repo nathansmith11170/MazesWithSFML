@@ -5,9 +5,9 @@
 #include <unordered_set>
 #include <cstdlib>
 
-#define WINDOW_WIDTH 800
-#define WINDOW_HEIGHT 600
-#define NODES 25
+#define WINDOW_WIDTH 1366
+#define WINDOW_HEIGHT 768
+#define NODES 30
 #define STROKE 5
 
 /*This function returns the next vertex of the graph given by depth first

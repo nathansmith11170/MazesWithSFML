@@ -5,9 +5,9 @@
 #include <unordered_set>
 #include <cstdlib>
 
-#define WINDOW_WIDTH 1366
-#define WINDOW_HEIGHT 768
-#define NODES 30
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT 600
+#define NODES 20
 #define STROKE 5
 
 /*This function returns the next vertex of the graph given by depth first
@@ -73,7 +73,8 @@ int main(int argc, char **argv) {
 
     //Create the SFML window, set framerate
     window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Maze");
-    window.setFramerateLimit(15);
+    window.setFramerateLimit(30
+    );
 
     //Set up borders
     topBorder = sf::RectangleShape(sf::Vector2f(WINDOW_WIDTH, STROKE));
@@ -153,8 +154,11 @@ int main(int argc, char **argv) {
         for( i = 0; i < rects.size(); i++) {
             if(i != currentVertex && visitedSet.count(i)) {
                 rects.at(i).setFillColor(sf::Color::Cyan);
+                window.draw(rects.at(i));
             }
-            window.draw(rects.at(i));
+            if( i == currentVertex ) {
+                window.draw(rects.at(i));
+            }
         }
         
         //Draw existent edges

@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include <MatrixGraph.h>
+#include "MatrixGraph.h"
 #include <cstdio>
 #include <vector>
 #include <unordered_set>
